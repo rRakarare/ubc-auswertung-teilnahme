@@ -122,8 +122,8 @@ function Bieter({ setDataArray }: { setDataArray: any }) {
       <DrawerContent>
         <div className="mx-auto w-full max-w-sm">
           <DrawerHeader>
-            <DrawerTitle>Are you absolutely sure?</DrawerTitle>
-            <DrawerDescription>This action cannot be undone.</DrawerDescription>
+            <DrawerTitle>Ausfüllen um Teilnehmer hinzuzufügen</DrawerTitle>
+            <DrawerDescription>...</DrawerDescription>
           </DrawerHeader>
           <DrawerFooter>
             <Input className="" onChange={onFileUpload} type="file" />
