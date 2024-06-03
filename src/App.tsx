@@ -55,7 +55,29 @@ function getElements(content: any) {
     allRichs.push({ Titel: title, Tag: tag, Wert: parseValue(value) });
   }
 
-  return allRichs;
+  const countSubTags = allRichs.map((rich) => rich.Tag ?  rich.Tag.split("|").length - 1 : 0);
+
+  const maxSubTags = Math.max(...countSubTags);
+
+  const newRichs = allRichs.map((rich) => {
+
+    const newRich = {...rich} as any;
+
+    const subTags = rich.Tag?.split("|");
+
+    if (subTags) {
+      newRich.Tag = subTags[0];
+    }
+
+    for (let i = 0; i < maxSubTags; i++) {
+      newRich[`Tag ${i + 1}`] = subTags && subTags[i + 1] ? subTags[i + 1] : "";
+    }
+
+    return newRich;
+
+  })
+
+  return newRichs;
 }
 
 function App() {
