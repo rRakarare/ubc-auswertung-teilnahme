@@ -49,9 +49,9 @@ function getElements(content: any) {
 
   for (let i = 0, len = richs.length; i < len; i++) {
     const rich = richs[i];
-    const title = rich.getElementsByTagName("w:alias")[0].getAttribute("w:val");
+    const title = rich.getElementsByTagName("w:alias")[0]?.getAttribute("w:val");
     const tag = rich.getElementsByTagName("w:tag")[0]?.getAttribute("w:val");
-    const value = rich.getElementsByTagName("w:t")[0].childNodes[0].nodeValue;
+    const value = rich.getElementsByTagName("w:t")[0]?.childNodes[0].nodeValue;
     allRichs.push({ Titel: title, Tag: tag, Wert: parseValue(value) });
   }
 
