@@ -50,7 +50,12 @@ function getElements(content: any) {
       .getElementsByTagName("w:alias")[0]
       ?.getAttribute("w:val");
     const tag = rich.getElementsByTagName("w:tag")[0]?.getAttribute("w:val");
+
+
+
     const value = rich.getElementsByTagName("w:t")[0]?.childNodes[0].nodeValue;
+
+
     allRichs.push({ Titel: title, Tag: tag, Wert: parseValue(value) });
   }
 
