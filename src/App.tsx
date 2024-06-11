@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import * as XLSX from "xlsx";
 import { Button } from "./components/ui/button";
 import Bieter from "./Bieter";
